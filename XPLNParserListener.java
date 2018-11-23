@@ -126,4 +126,44 @@ public interface XPLNParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitCond(XPLNParser.CondContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XPLNParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void enterS(XPLNParser.SContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XPLNParser#s}.
+	 * @param ctx the parse tree
+	 */
+	void exitS(XPLNParser.SContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XPLNParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void enterE(XPLNParser.EContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XPLNParser#e}.
+	 * @param ctx the parse tree
+	 */
+	void exitE(XPLNParser.EContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XPLNParser#t}.
+	 * @param ctx the parse tree
+	 */
+	void enterT(XPLNParser.TContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XPLNParser#t}.
+	 * @param ctx the parse tree
+	 */
+	void exitT(XPLNParser.TContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link XPLNParser#ff}.
+	 * @param ctx the parse tree
+	 */
+	void enterFf(XPLNParser.FfContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link XPLNParser#ff}.
+	 * @param ctx the parse tree
+	 */
+	void exitFf(XPLNParser.FfContext ctx);
 }
