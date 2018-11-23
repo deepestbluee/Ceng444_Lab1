@@ -15,21 +15,13 @@ public class XPLNParserBaseListener implements XPLNParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	int counter = 0;
-	int startCounter = 0;
-	int stateF = 0;
 	@Override public void enterStart(XPLNParser.StartContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStart(XPLNParser.StartContext ctx) {
-		if(startCounter==0)
-		{
-			System.out.println(ctx.getText());
-		} 
-	}
+	@Override public void exitStart(XPLNParser.StartContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -101,16 +93,7 @@ public class XPLNParserBaseListener implements XPLNParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRet(XPLNParser.RetContext ctx) { 
-		if(stateF>0)
-		{
-			counter++;
-		}
-		else
-		{
-			startCounter++;
-		}	
-		}
+	@Override public void exitRet(XPLNParser.RetContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -128,22 +111,13 @@ public class XPLNParserBaseListener implements XPLNParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDef(XPLNParser.DefContext ctx) {
-		stateF = 1;
-		counter = 0; }
+	@Override public void enterDef(XPLNParser.DefContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDef(XPLNParser.DefContext ctx) {
-
-		if(counter==0)
-		{
-			System.out.println("No return value in the Function");	
-			stateF = 0;		
-		} 
-	}
+	@Override public void exitDef(XPLNParser.DefContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -185,17 +159,13 @@ public class XPLNParserBaseListener implements XPLNParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterS(XPLNParser.SContext ctx) { 
-				System.out.println("No return value in the Function");	
-				System.out.println(ctx.getText());
-}
+	@Override public void enterS(XPLNParser.SContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitS(XPLNParser.SContext ctx) { 
-	System.out.println(ctx.getText());}
+	@Override public void exitS(XPLNParser.SContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -256,9 +226,5 @@ public class XPLNParserBaseListener implements XPLNParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void visitErrorNode(ErrorNode node) {
-
-	 }
-
-
+	@Override public void visitErrorNode(ErrorNode node) { }
 }

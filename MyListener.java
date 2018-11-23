@@ -1,13 +1,12 @@
-class MyListener extends MyGrammarBaseListener {
+class MyListener extends XPLNParserBaseListener {
 
     int counter = 0;
     int startCounter = 0;
     int stateF = 0;
     @Override public void exitStart(XPLNParser.StartContext ctx) {
-        System.out.println(ctx.getText());
         if(startCounter==0)
         {
-            System.out.println("No return value in the Program");
+            System.out.println("No return value in the Program2");
         } 
     }
 

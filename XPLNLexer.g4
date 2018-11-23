@@ -26,7 +26,7 @@ ENDFUN			: 'endfun'	;
 
 
 
-NEWLINE    		: ('\r'? '\n' | '\r')+ 			;
+NEWLINE    		: ('\r'? '\n' | '\r')+ 	-> skip		;
 COMMENTS        : ('/*' .*? '*/' | '//' ~'\n'* '\n' ) -> skip;
 
 ID			: [a-zA-Z]+ ;
