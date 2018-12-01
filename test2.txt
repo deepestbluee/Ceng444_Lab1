@@ -1,0 +1,6 @@
+initial:=statement;
+fun funTest(argOne , argTwo)                                                                                          
+    thereIs := noReturn; 
+    inThe := Function;                                                                                        
+endf;     
+return val;

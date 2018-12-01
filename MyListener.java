@@ -6,7 +6,7 @@ class MyListener extends XPLNParserBaseListener {
     @Override public void exitStart(XPLNParser.StartContext ctx) {
         if(startCounter==0)
         {
-            System.out.println("No return value in the Program2");
+            System.out.println("No return value in the Program");
         } 
     }
 
@@ -32,8 +32,10 @@ class MyListener extends XPLNParserBaseListener {
         if(counter==0)
         {
             System.out.println("No return value in the Function");  
+        }
+	 
+
             stateF = 0;     
-        } 
     }    
 
 }

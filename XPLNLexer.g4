@@ -17,18 +17,20 @@ MINUS			: '+'				;
 PLUS			: '-'				;
 MULTI			: '*'				;
 DIVIDE			: '/'				;
+COMMA			: ','				;
 IF			: 'if' 		;
 WHILE			: 'while'	;
-ENDIF			: 'endf'	;
+ENDIF			: 'endi'	;
 ENDWH			: 'endw'	;
 FUN			: 'fun'		;
-ENDFUN			: 'endfun'	;
-
+ENDFUN			: 'endf'	;
+ELSE			: 'else'	;
 
 
 NEWLINE    		: ('\r'? '\n' | '\r')+ 	-> skip		;
 COMMENTS        : ('/*' .*? '*/' | '//' ~'\n'* '\n' ) -> skip;
 
-ID			: [a-zA-Z]+ ;
 NUMBER      : DIGIT+ ([.,] DIGIT+)? 		;
+ID			: [a-zA-Z] AA ;
+AA          : (LOWERCASE | UPPERCASE | DIGIT) AA | ; 
 WS		: [ \t\r\n]+ -> skip;  

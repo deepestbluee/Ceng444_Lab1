@@ -1,0 +1,22 @@
+initial:=statement;
+
+fun funTesttwo(argOne, argTwo)                                                                                                 
+    if argOne > argTwo                                                                                                  
+        return argOne;                                                                                             
+    else                                                                                                      
+        return argTwo;                                                                                             
+    endi;                                                                                                     
+endf;                                                                                                         
+                                                                                                              
+fun funTestthree(argOne, argTwo)                                                                                          
+    if funTesttwo(argOne ,argTwo) == argOne or argOne == argTwo                                                                               
+        return argOne;                                                                                             
+    else
+		dummyOne := 1.3;                                                                                                  
+		dummyTwo := 5;                                                                                                          
+        return dummyTwo;                                                                                             
+    endi;                                                                                                     
+endf;  
+
+thereIs := noReturn;
+inThe := mainBody;

@@ -1,0 +1,38 @@
+floatAssigntest := 1.3;                                                                                                  
+numberAssigntest :=5;                                                                                                  
+                                                                                                              
+fun funTest(argOne , argTwo)                                                                                          
+    return argOne * argTwo;                                                                                         
+endf;                                                                                                         
+                                                                                                              
+fun funTest2(argOne, argTwo)                                                                                                 
+    if argOne > argTwo                                                                                                  
+        return argOne;                                                                                             
+    else                                                                                                      
+        return argTwo;                                                                                             
+    endi;                                                                                                     
+endf;                                                                                                         
+                                                                                                              
+fun bigOrEqual(a ,b)                                                                                          
+    if max(a,b) == a or a == b                                                                               
+        return a;                                                                                             
+    else                                                                                                      
+        return b;                                                                                             
+    endi;                                                                                                     
+endf;                                                                                                         
+                                                                                                              
+fun fib(n)                                                                                                    
+    a := 0;                                                                                                   
+    b := 1;                                                                                                   
+    count := 0;                                                                                               
+    tmp := 0;                                                                                                 
+    while count < n                                                                                           
+        tmp := a;                                                                                             
+        a := b;                                                                                               
+        b := tmp + b;                                                                                         
+        count := count + 1;                                                                                   
+    endw;                                                                                                     
+    return a;                                                                                                 
+endf;                                                                                                         
+                                                                                                                                                                                                                            
+return 0;    
